@@ -1,0 +1,16 @@
+#!name=goodnotes6
+#!desc=🔗 [2023/8/10 08:08:30] goodnotes6
+
+# 🔗 模块链接
+#SUBSCRIBED http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js/_end_/goodnotes6.sgmodule?type=qx-rewrite&target=surge-module
+
+
+[Script]
+
+goodnotes6_8 = type=http-response, pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js, timeout=60, script-update-interval=0
+
+goodnotes6_9 = type=http-request, pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% isi.csan.goodnotes.com

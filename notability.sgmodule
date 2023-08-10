@@ -1,0 +1,14 @@
+#!name=notability
+#!desc=🔗 [2023/8/10 08:09:46] notability
+
+# 🔗 模块链接
+#SUBSCRIBED http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js/_end_/notability.sgmodule?type=qx-rewrite&target=surge-module
+
+
+[Script]
+
+notability_8 = type=http-response, pattern=^https?:\/\/notability\.com\/(global|subscriptions), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% notability.com
